@@ -118,7 +118,22 @@ export default function Layout() {
                         ),
                         headerTitleAlign: 'center'
                     }} />
-               {/*   <Drawer.Screen
+                 <Drawer.Screen
+                    name="favourites"
+                    options={{
+                        headerShown: true,
+                        headerTitle: "Favourites",
+                        drawerPosition: "right",
+                        headerRight: () => <DrawerToggleButton />,
+                        headerLeft: () => (
+                            <Image
+                                source={require("../../assets/logo.png")}
+                                style={{ width: 50, height: 50, marginLeft: 10 }}
+                            />
+                        ),
+                        headerTitleAlign: 'center'
+                    }} />
+                 <Drawer.Screen
                     name="settings"
                     options={{
                         headerShown: true,
@@ -132,7 +147,7 @@ export default function Layout() {
                             />
                         ),
                         headerTitleAlign: 'center'
-                    }} /> */}
+                    }} />
             </Drawer>
         </GestureHandlerRootView>
     );
