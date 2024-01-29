@@ -101,13 +101,14 @@ const CustomDrawerContent = (props) => {
 export default function Layout() {
     return (
         <GestureHandlerRootView style={{ flex: 1 }} >
-            <Drawer drawerContent={(props) => <CustomDrawerContent {...props} />} screenOptions={{ headerShown: false }}>
-                <Drawer.Screen
-                    name="favourites"
+            <Drawer   drawerContent={(props) => <CustomDrawerContent {...props} />} screenOptions={{ headerShown: false }}>
+               <Drawer.Screen
+                    name="(tabs)"
                     options={{
                         headerTitle: "Favourites",
                         headerShown: true,
                         drawerPosition: "right",
+                        headerShown:false,
                         headerRight: () => <DrawerToggleButton />,
                         headerLeft: () => (
                             <Image
@@ -117,7 +118,7 @@ export default function Layout() {
                         ),
                         headerTitleAlign: 'center'
                     }} />
-                <Drawer.Screen
+               {/*   <Drawer.Screen
                     name="settings"
                     options={{
                         headerShown: true,
@@ -131,7 +132,7 @@ export default function Layout() {
                             />
                         ),
                         headerTitleAlign: 'center'
-                    }} />
+                    }} /> */}
             </Drawer>
         </GestureHandlerRootView>
     );

@@ -7,7 +7,7 @@ export default function Layout() {
     return (
 
             <Stack screenOptions={{ headerShown: false }}>
-                <Stack.Screen name='(tabs)' />
+                {/* <Stack.Screen name='(tabs)/home' /> */}
                 <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
             </Stack>
 
